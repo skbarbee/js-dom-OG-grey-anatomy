@@ -21,7 +21,7 @@ interactivity!
 
 This will be like a personal mini project! 
 
-1. Create a new repo for this in your personal Github (**not Github Enterprise**)
+1. Create a new repo for this in your **personal Github** (*not Github Enterprise*)
 2. Submit what you've created at the end of the week using the Homework Submission Form.
 
 ## Requirements
