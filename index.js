@@ -18,15 +18,39 @@ class Character {
             card.innerHTML = `<h4><b>${this.name}</b></h4>`
             const picture = document.createElement('div')
             picture.classList.add("picture")
-            picture.innerHTML = `<img src="${this.imgSrc}" alt="picture of ${this.name}" style="width:100%">`
+            picture.innerHTML = `<img src="${this.imgSrc}" alt="picture of ${this.name}" >`
             const container = document.createElement('div')
             container.classList.add("container")
-            container.innerHTML = `<button id= "${this.name}-bio" type="button">Bio</button> <button id= "${this.name}-status" type="button">Status</button>`
+            const bioButton = document.createElement("button")
+            bioButton.innerHTML = `<button class = "bio" type="button">Bio</button>`
+            bioButton.addEventListener('click',(e)=>{
+                console.log(`${this.name}'s bio button works`)
+            })
+            const statusButton = document.createElement("button")
+            statusButton.innerHTML = `<button class= "status" type="button">Status</button>`
+            statusButton.addEventListener('click',()=>{
+                console.log(`${this.name}'s status button works`)
+            })
+            container.appendChild(bioButton)
+            container.appendChild(statusButton)
             cardArea.appendChild(card)
             card.appendChild(picture)
             card.appendChild(container)
         }
-     
+       
+        
+    //    bioButton (){
+    //        let button = document.querySelectorAll('.bio')
+    //        //console.log(button)
+    //        this.button.addEventListener("click", function (){
+    //         console.log("it worked")
+    //        })
+           
+           
+        
+      
+        
+       
        
 }
 
@@ -34,6 +58,7 @@ class Character {
 
 const callieTorres = new Character("Calliope Iphengenia Torres", true, ["Callie","Callie O'Malley", "Ortho Goddess","Dr.T"], "Orthopedic Surgeon","callieTorres.jpeg")
 callieTorres.makeCard()
+
 const meredithGrey = new Character("Meredith Gray", true, ["Chief of Surgery","Mer","Big Grey", "Our Lady of General Surgery","Mer-Der"], "General Surgery","meredithGray.jpeg" )
 meredithGrey.makeCard()
 const alexKarev = new Character("Alexander Michael Karev", true, ["Alex","Dr. Hottie", "Boy Wonder","Dr. Doucheface"], "Pediatric Surgery","alexKarev.jpeg" )
@@ -44,7 +69,7 @@ const derekShepherd = new Character("Derek Christopher Shepherd", false, ["McDre
 derekShepherd.makeCard()
 const markSloan = new Character("Mark Everett Sloan", false, ["McSteamy","Super famous plastics guy", "Pastics Posse","Chief Sloan"], "Plastic Surgery","markSloan.jpeg" )
 markSloan.makeCard()
-console.log(meredithGrey,callieTorres,alexKarev,cristinaYang,derekShepherd,markSloan)
+// console.log(meredithGrey,callieTorres,alexKarev,cristinaYang,derekShepherd,markSloan)
 // console.log (cardArea)
 // const makeCards = ()=>{
 //     for (let i=0; i<characters.length; i++){
