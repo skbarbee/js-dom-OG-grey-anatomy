@@ -10,32 +10,33 @@ class Character {
         this.imgSrc = imgSrc
     }
 
-        makeCard () {
-            //create card border
-            console.log("this worked")
-            const card = document.createElement('div')
-            card.classList.add('card')
-            card.innerHTML = `<h4><b>${this.name}</b></h4>`
-            const picture = document.createElement('div')
-            picture.classList.add("picture")
-            picture.innerHTML = `<img src="${this.imgSrc}" alt="picture of ${this.name}" >`
-            const container = document.createElement('div')
-            container.classList.add("container")
-            const bioButton = document.createElement("button")
-            bioButton.innerHTML = `<button class = "bio" type="button">Bio</button>`
-            bioButton.addEventListener('click',(e)=>{
-                console.log(`${this.name}'s bio button works`)
-            })
-            const statusButton = document.createElement("button")
-            statusButton.innerHTML = `<button class= "status" type="button">Status</button>`
-            statusButton.addEventListener('click',()=>{
-                console.log(`${this.name}'s status button works`)
-            })
-            container.appendChild(bioButton)
-            container.appendChild(statusButton)
-            cardArea.appendChild(card)
-            card.appendChild(picture)
-            card.appendChild(container)
+    makeCard () {
+         //create card border
+        console.log("this worked")
+        const card = document.createElement('div')
+        card.classList.add('card')
+        card.innerHTML = `<h4><b>${this.name}</b></h4>`
+        const picture = document.createElement('div')
+        picture.classList.add("picture")
+        picture.innerHTML = `<img src="${this.imgSrc}" alt="picture of ${this.name}" >`
+        const container = document.createElement('div')
+        container.classList.add("container")
+        const bioButton = document.createElement("button")
+        bioButton.innerHTML = `<button class = "bio" type="button">Bio</button>`
+        bioButton.addEventListener('click',(e)=>{
+            console.log(`${this.name}'s bio button works`)
+            this.container.innerText = `${this.nickname}\n ${this.speciality}`
+        })
+        const statusButton = document.createElement("button")
+        statusButton.innerHTML = `<button class= "status" type="button">Status</button>`
+        statusButton.addEventListener('click',()=>{
+            console.log(`${this.name}'s status button works`)
+        })
+        container.appendChild(bioButton)
+        container.appendChild(statusButton)
+        cardArea.appendChild(card)
+        card.appendChild(picture)
+        card.appendChild(container)
         }
        
         
@@ -45,7 +46,10 @@ class Character {
     //        this.button.addEventListener("click", function (){
     //         console.log("it worked")
     //        })
-           
+    showBio (e){
+        container.innerText = `${this.nickname}\n ${this.speciality}`
+
+    }
            
         
       
