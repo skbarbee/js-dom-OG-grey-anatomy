@@ -1,7 +1,9 @@
 h1{
     color: blue;
 }
-
+body{
+    text-align: center;
+}
 #cardArea{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -19,13 +21,13 @@ h1{
     margin: 5%;
     
 }
-
 .picture{
     display: flex;
-    justify-content: stretch;
-    height: 70%;
-    width: 80%;
-    padding: 5%;
+    justify-content: center;
+    height: 90%;
+    width: 95%;
+    padding: 2.5%
+   
 } 
 
 img{
@@ -35,9 +37,9 @@ img{
  
 .container{
     display: flex;
-    justify-self: space-around;
-    justify-content: space-around;
-    justify-items: space-around;
+    width: 100%;
+   justify-content: space-around;
+   
 }
 
 
