@@ -1,6 +1,7 @@
 const cardArea = document.querySelector('#cardArea')
 
 
+
 class Character {
     constructor(name, alive, nickname, speciality,imgSrc){
         this.name = name;
@@ -9,7 +10,8 @@ class Character {
         this.speciality = speciality;
         this.imgSrc = imgSrc
     }
-
+   
+    
     makeCard () {
          //create card border
         console.log("this worked")
@@ -22,21 +24,23 @@ class Character {
         const container = document.createElement('div')
         container.classList.add("container")
         const bioButton = document.createElement("button")
-        bioButton.innerHTML = `<button class = "bio" type="button"> Bio </button>`
-       
-        bioButton.addEventListener('click',()=>{
-            // console.log(`${this.name}'s bio button works`)
-        })
+        //create bio div
+        const bio = document.createElement('div')
+        bio.innerText=`${this.name} specaility is ${this.speciality}. Their nicknames are ${this.nickname}`
+        
+        bioButton.innerHTML = `<button onclick = "bioDiv()" class = "bio" type="button"> Bio </button>`
         const statusButton = document.createElement("button")
         statusButton.innerHTML = `<button class= "status" type="button">Status</button>`
         statusButton.addEventListener('click',()=>{
             console.log(`${this.name}'s status button works`)
         })
+        
         container.appendChild(bioButton)
         container.appendChild(statusButton)
         cardArea.appendChild(card)
         card.appendChild(picture)
         card.appendChild(container)
+        card.appendChild(bio)
         }
        
         
@@ -60,6 +64,7 @@ class Character {
 
 
 const callieTorres = new Character("Calliope Iphengenia Torres", true, ["Callie","Callie O'Malley", "Ortho Goddess","Dr.T"], "Orthopedic Surgeon","callieTorres.jpeg")
+
 callieTorres.makeCard()
 
 const meredithGrey = new Character("Meredith Gray", true, ["Chief of Surgery","Mer","Big Grey", "Our Lady of General Surgery","Mer-Der"], "General Surgery","meredithGray.jpeg" )
@@ -73,6 +78,17 @@ derekShepherd.makeCard()
 const markSloan = new Character("Mark Everett Sloan", false, ["McSteamy","Super famous plastics guy", "Pastics Posse","Chief Sloan"], "Plastic Surgery","markSloan.jpeg" )
 markSloan.makeCard()
 
-const cardAreaListener = cardArea.addEventListener('click', (e)=> {
-   e.target.id
-})
+const bioDiv = ()=> {
+    const bio = document.querySelectorAll(".bio")
+    if (bio.style.display === "none") {
+      bio.style.display = "flex";
+      console.log("show bio")
+    } else {
+      bio.style.display = "none";
+      console.log('hide bio')
+    }
+  }
+document.addEventListener('DOMContentLoaded', bioDiv())
+// const cardAreaListener = cardArea.addEventListener('click', (e)=> {
+//    e.target.id
+// })

@@ -1,13 +1,30 @@
-h1{
-    color: blue;
-}
 body{
     text-align: center;
+    
+}
+
+header{
+    background-image:url("Seattle-Greys-Anatomy.jpeg") ;
+    background-position: center;
+    background-size:cover;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+main{
+    background-image:url("Seattle-Greys-Anatomy.jpeg");
+    display:flex;
+    justify-content: center;
+    
 }
 #cardArea{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    
+    background-color: azure;
+    width: 90%;
+      
 }
 
 .card {
