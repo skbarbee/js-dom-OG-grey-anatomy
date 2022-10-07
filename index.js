@@ -16,9 +16,10 @@ searchInput.addEventListener("input", (e) => {
   console.log(value)
   return value
   })
-//   submitButton.addEventListener("click",)
-// //on click somehow iterate and filter through characterNameArray
-// //
+// submitButton.addEventListener("click",)
+// on click somehow iterate and filter through characterNameArray
+//(?filter )
+// once we find the name
   
 
 

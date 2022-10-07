@@ -18,11 +18,10 @@ header{
 main{
     background-image:url("Seattle-Greys-Anatomy.jpeg");
     display:flex;
-    
     justify-content: center;
-
     
 }
+
 #cardArea{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -46,15 +45,15 @@ main{
     display: flex;
     justify-content: center;
     align-content: center;
-    height: 90%;
+    height: 100%;
     width: 90%;
     margin: auto;
-    
-   
+
 } 
 
 img{
     border-radius: 5px ;
+    width: 100%;
     
 }
  
