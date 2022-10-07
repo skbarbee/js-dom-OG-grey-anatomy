@@ -9,14 +9,18 @@ header{
     background-size:cover;
     height: 30vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
 }
+
 main{
     background-image:url("Seattle-Greys-Anatomy.jpeg");
     display:flex;
+    
     justify-content: center;
+
     
 }
 #cardArea{
